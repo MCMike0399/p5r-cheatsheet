@@ -13,7 +13,7 @@ export default function SearchBar({ searchData, setSearchData }: Props) {
    const [localSearchData, setLocalSearchData] = useState<string>(searchData);
 
    useEffect(() => {
-      if (localSearchData.length > 4 || localSearchData.length === 0) {
+      if (localSearchData.length >= 4 || localSearchData.length === 0) {
          setSearchData(localSearchData);
       }
    }, [localSearchData, setSearchData]);
