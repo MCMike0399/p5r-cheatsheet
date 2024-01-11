@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Grid, Table, TableBody, TableCell, TableHead, TableRow, useMediaQuery, useTheme } from "@mui/material";
+import { Grid, Table, TableBody, TableCell, TableRow, useMediaQuery, useTheme } from "@mui/material";
 
 type Props = {
    name: string;
@@ -30,16 +30,6 @@ export default function Confidant({ name, data, searchData }: Props) {
    return (
       <Grid item xs={12}>
          <Table>
-            <TableHead>
-               <TableRow>
-                  {isMobile ? null : (
-                     <>
-                        <TableCell style={{ fontWeight: "bold", fontSize: "1.1rem" }}>Rank</TableCell>
-                        <TableCell style={{ fontWeight: "bold", fontSize: "1.1rem" }}>Response</TableCell>
-                     </>
-                  )}
-               </TableRow>
-            </TableHead>
             <TableBody>
                {filteredData.map((rankItem, rankIndex) => (
                   <Fragment key={rankIndex}>
